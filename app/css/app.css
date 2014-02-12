@@ -30,7 +30,7 @@
 }
 
 body {
-  background-color: white;
+
   padding: 0;
   margin: 0;
 
@@ -107,4 +107,29 @@ li {
 
 .links {
   text-align: center;
+}
+
+
+.notableBackground {
+  background-color: #fff;
+  width: 90%;
+  margin: 2%;
+  padding: 2%;
+  text-align: center;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+}
+
+
+
+.notableRank {
+  position: left;
+  padding: 2%;
+}
+
+.notableDetails {
+  position: right;
 }

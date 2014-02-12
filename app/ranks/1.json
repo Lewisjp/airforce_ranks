@@ -1,0 +1,9 @@
+[
+{
+  "name": "Airman Basic Training",
+  "payGrade": "E1",
+  "role": "Basic Training takes 8 1/2 weeks, followed by the Airman's Air Force Specialty training.  Lenght of occupation speciality training varies.",
+  "image": "basic.jpg",
+  "abbrev" : "AB"
+}
+]

@@ -1,16 +1,23 @@
-'use strict';
+'use struct';
 
+var airforcerankApp = angular.module('airforcerankApp',[
+		'ngRoute',
+		'airforcerankControllers'
+	]);
 
-// Declare app level module which depends on filters, and services
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+airforcerankApp.config(['$routeProvider',
+	function($routeProvider){
+		$routeProvider.
+			when('/ranks', {
+				templateUrl: 'partials/rank-list.html',
+				controller: 'AirForceRankListCtrl'
+			}).
+			when('/ranks/:rankId', {
+				templateUrl: 'partials/rank-detail.html',
+				controller: 'AirForceRankDetailCtrl'
+			}).
+			otherwise({
+				redirectTo: '/ranks'
+			});
+	}]);
+

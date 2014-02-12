@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app=airforcerankApp>
+<html lang="en" ng-app="airforcerankApp" class="ng-scope">
   <head>
     <meta charset='utf-8'>
     <title>Enlisted Air Force Ranks</title>
@@ -8,70 +8,15 @@
 
     <link href='http://fonts.googleapis.com/css?family=Rosario' rel='stylesheet' type='text/css'>
 
-<!--     <link rel="stylesheet" href="css/bootstrap.css"> -->
- 
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
   </head>
-  <body ng-controller="AirForceRankCtrl">
-<div class="userInput">
+  <body>
 
-    <h1>
-      Enlisted Air Force Ranks
-    </h1>
 
-    Search through the {{ranks.length}} Enlisted Air Force Ranks: <input ng-model="query"><br>
-    Sort by:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="payGrade">Pay Grade</option>
-      </select>
-</div>
+    <div ng-view></div>
 
-<div class="container">
-    <div class="data">
-
-      <ul class="ranks">
-        <li ng-repeat="rank in ranks | filter:query | orderBy:orderProp">
-          <div class="rank">
-            <strong>
-              <p>{{rank.name}}</p>
-            </strong>
-            <p>
-              Abbreviation: 
-              <em>{{rank.Abbrev}}</em>
-            </p>
-            <p>Pay Grade: 
-            <em>
-              {{rank.payGrade}}</p>
-            </em>
-            <img ng-src="img/{{rank.image}}" class="rank-pic"/>
-          </div>
-          <div class="details">
-            <p>{{rank.role}}</p>
-          </div>
-
-        </li>
-      </ul>
-    </div>
-    <div class="background">
-      <ul>
-        <li>
-          <p>This site was made as an educational and entertainment side project while learning <a href="http://angularjs.org/">Angular</a>, and is in no way associated with the United States Air Force.  Feel free to share your thoughts by  <a href="https://twitter.com/intent/tweet?screen_name=LewisJPaul">Twitter</a>. To learn about the the U.S. Air Force please visit one of their official sites linked below.</p>
-        <div class="links">
-
-          <a href=""></a>
-
-          <form method="link" action="http://www.af.mil/"><input type ="submit" value ="Home Page of the U.S. Air Force"></form>
-
-          <form method="link" action="http://www.ang.af.mil/"><input type="submit" value= "Air National Guard"></form>
-
-          <form method="link" action="http://www.airforce.com/"><input type="submit" value="Join the Air Force"></form>
-        </div>
-        </p> 
-        </li>
-      </ul>
-    </div>
-</div>
   </body>
 </html>
