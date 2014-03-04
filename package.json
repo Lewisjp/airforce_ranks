@@ -1,12 +1,35 @@
 {
-  "name": "angularjs-seed",
+  "name": "AirforceRanks",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/angular-seed"
+  },
   "devDependencies": {
-    "phantomjs" : "~1.9",
-    "karma" : "~0.10",
-    "karma-junit-reporter" : "~0.1",
-    "karma-jasmine" : "~0.1",
-    "protractor" : "~0.17.0"
+    "phantomjs": "~1.9",
+    "karma": "~0.10",
+    "karma-junit-reporter": "~0.1",
+    "karma-jasmine": "~0.1",
+    "protractor": "~0.17.0"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular-seed/issues"
+  },
+  "version": "0.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "airforce"
+  ],
+  "author": "lewisjpaul",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "logfmt": "~0.21.0",
+    "express": "~3.4.8"
   }
 }
