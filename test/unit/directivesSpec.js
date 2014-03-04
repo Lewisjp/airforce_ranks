@@ -2,18 +2,16 @@
 
 /* jasmine specs for directives go here */
 
-describe('directives', function() {
-  beforeEach(module('myApp.directives'));
-
-  describe('app-version', function() {
-    it('should print current version', function() {
-      module(function($provide) {
-        $provide.value('version', 'TEST_VER');
-      });
-      inject(function($compile, $rootScope) {
-        var element = $compile('<span app-version></span>')($rootScope);
-        expect(element.text()).toEqual('TEST_VER');
-      });
-    });
+describe('airforceranks controllers', function() {
+  beforeEach(module('airforceranksApp'));
+ 
+  describe('AirForceRanksListCtrl', function(){
+ 
+    it('should create "phones" model with 3 phones', inject(function($controller) {
+      var scope = {},
+          ctrl = $controller('AirForceRanksListCtrl', { $scope: scope });
+ 
+      expect(scope.phones.length).toBe(14);
+    }));
   });
 });
